@@ -92,12 +92,16 @@ body {
     transition: color 0.1s ease-in-out;
 }
 
-.dates_link:hover {
+.dates_link:not(.dates_link_current):hover {
     background-color: rgb(201, 201, 201);
 }
 
 .dates_link_current {
     background-color: rgb(252, 226, 81);
+}
+
+.dates_link_current:hover {
+    background-color: rgb(231, 208, 74);
 }
 
 .date {
