@@ -7,13 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--links-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
     <title>
-
         {{ title }}
-
     </title>
+
+    {% block head_content %}
+    <!--head_content-->
+    {% endblock head_content %}
+
 </head>
 <body>
-    {}
+    <header class="header">
+        <!--header_content-->
+    </header>
+    <main class="main">
+        {% block main_content %}
+        <!--main_content-->
+        {% endblock main_content %}
+    </main>
+    
 </body>
 </html>
