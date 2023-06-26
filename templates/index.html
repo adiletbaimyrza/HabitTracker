@@ -6,7 +6,7 @@
     {% for habit in habits %}
     {% set completed = habit in completions %}
     
-    {% if completed}
+    {% if completed %}
     <div class="habit_completed">
         <p class="habit_name"> {{ habit }}</p>
         <svg class="habit__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

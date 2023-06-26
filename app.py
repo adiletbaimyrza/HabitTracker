@@ -30,7 +30,7 @@ def index():
                            selected_date=selected_date,
                            completions=completions[selected_date])
 
-@app.route("/add/", methods=["GET", "POST"])
+@app.route("/add", methods=["GET", "POST"])
 def add_habit():
     if request.method == "POST":
         habit = request.form.get("habit")
@@ -40,10 +40,10 @@ def add_habit():
                            title="Habit Tracker - Add Habit",
                            selected_date=datetime.date.today())
     
-@app.route("/complete/", methods=["POST"])
+@app.route("/complete", methods=["POST"])
 def complete():
     date_string = request.form.get("date")
-    habit = request.form.get("habitName")
+    habit = request.form.get("habit_name")
     
     date = datetime.date.fromisoformat(date_string)
     completions[date].append(habit)
