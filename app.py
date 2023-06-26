@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 habits = ["Test Habit 1", "Test Habit 2"]
@@ -9,7 +9,7 @@ def index():
 
 @app.route("/add", methods=["GET", "POST"])
 def add_habit():
-    if request.form == "POST":
+    if request.method == "POST":
         habit = request.form.get("habit")
         habits.append(habit)
     
