@@ -19,10 +19,10 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header_logo"><a href="{{ url_for('index') }}" class="header_link">Habits</a></h1>
+        <h1 class="header_logo"><a href="{{ url_for('habits.index') }}" class="header_link">Habits</a></h1>
 
         {% if "add" not in request.endpoint %}
-        <a href="{{ url_for('add_habit') }}" class="header_link">+ Add Habit</a>
+        <a href="{{ url_for('habits.add_habit') }}" class="header_link">+ Add Habit</a>
         {% endif %}
     </header>
     <main class="main">
@@ -30,7 +30,7 @@
             {% for date in date_range(selected_date) %}
             <a
                 class="dates_link {{ 'dates_link_current' if loop.index0 == 3 else ''}}"
-                href="{{ url_for('index', date=date) }}"
+                href="{{ url_for('habits.index', date=date) }}"
             >
                 <time class="date" datetime="{{ date }}">
                     <span>{{ date.strftime("%a") }}</span>
