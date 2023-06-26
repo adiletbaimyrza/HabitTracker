@@ -131,4 +131,45 @@ span {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(233, 210, 82);
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.habit:not(.completed) {
+    padding: 0;
+}
+
+.habit:not(.completed):hover {
+    background-color:rgb(233, 210, 82);
+}
+
+.habit_icon {
+    width: 1em;
+    height: 1em;
+}
+
+.habit_name {
+    margin: 0;
+}
+
+.habit_form {
+    width: 100%;
+}
+
+.habit_button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
 }
