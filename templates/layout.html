@@ -26,8 +26,6 @@
         {% endif %}
     </header>
     <main class="main">
-        {% block main_content %}
-        
         <section class="dates">
             {% for date in date_range(selected_date) %}
             <a
@@ -41,6 +39,7 @@
             </a>
             {% endfor %}
         </section>
+        {% block main_content %}
         
         {% endblock main_content %}
     </main>
