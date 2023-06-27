@@ -13,3 +13,5 @@ def create_app():
     client = MongoClient(os.getenv("MONGODB_URI"))
     
     return app
+
+app = create_app()
