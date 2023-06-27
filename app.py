@@ -11,6 +11,5 @@ def create_app():
     app.register_blueprint(pages)
     
     client = MongoClient(os.getenv("MONGODB_URI"))
-    app.db = client["tracker"]
     
     return app
