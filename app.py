@@ -10,7 +10,7 @@ def create_app():
     app = Flask(__name__)
     app.register_blueprint(pages)
     
-    client = MongoClient(os.environ.get("MONGODB_URI"))
+    client = MongoClient(os.getenv("MONGODB_URI"))
     app.db = client.get_default_database()
     
     return app
